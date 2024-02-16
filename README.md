@@ -48,7 +48,7 @@ Make sure you have installed the following software :
 5. Run the visual report
 
     ```bash
-        npm run start
+    npm run start
     ```
 
 ## Screenshots
