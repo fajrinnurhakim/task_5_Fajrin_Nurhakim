@@ -1,6 +1,6 @@
 ## Task • [Final Task] REST API Load Testing With K6
 
-### Created by Fajrin Nurhakim
+This project was created to fulfill the final task of the PBI program given by Evermos and Rakamin. Before being implemented in K6, I conducted API testing using Postman. Here is the documentation of the [Postman test](https://documenter.getpostman.com/view/28965065/2s9YypEi8f) results. Next, to implement the prepared test scenarios, please follow the steps below. To view the results of the work I have done, please see the attached screenshots below.
 
 ## Getting Started
 
@@ -55,14 +55,14 @@ Make sure you have installed the following software :
 
 ### Test Integration
 
-![text report screenshot]()
+![text report screenshot](https://github.com/fajrinnurhakim/task_5_Fajrin_Nurhakim/blob/main/image/test_integration.jpg)
 
 ### Test Performance
 
-![text report screenshot]()
+![text report screenshot](https://github.com/fajrinnurhakim/task_5_Fajrin_Nurhakim/blob/main/image/test_performance.jpg)
 
 ### Visual Report
 
-![visual report screenshot 1]()
-![visual report screenshot 2]()
-![visual report screenshot 3]()
+![visual report screenshot 1](https://github.com/fajrinnurhakim/task_5_Fajrin_Nurhakim/blob/main/image/visual_report_req_metrics.jpg)
+![visual report screenshot 2](https://github.com/fajrinnurhakim/task_5_Fajrin_Nurhakim/blob/main/image/visual_report_stats.jpg)
+![visual report screenshot 3](https://github.com/fajrinnurhakim/task_5_Fajrin_Nurhakim/blob/main/image/visual_report_checks.jpg)
