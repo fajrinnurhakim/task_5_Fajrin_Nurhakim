@@ -1,5 +1,5 @@
 import http from "k6/http";
-import { check } from "k6";
+import { check, sleep } from "k6";
 
 export default function () {
     const base_url = "https://reqres.in/api";
@@ -25,6 +25,16 @@ export default function () {
     check(createResponse, {
         "Create User - response code was 201": (createResponse) =>
             createResponse.status == 201,
+        "Create User - response time is less than 2000ms": (createResponse) =>
+            createResponse.timings.duration < 2000,
+        "Post response name is correct": (createResponse) => {
+            const responseBody = JSON.parse(createResponse.body);
+            return responseBody.name === "morpheus";
+        },
+        "Post response job is correct": (createResponse) => {
+            const responseBody = JSON.parse(createResponse.body);
+            return responseBody.job === "leader";
+        },
     });
 
     // Scenario Test 2: API Update - Method PUT
@@ -46,5 +56,15 @@ export default function () {
     check(updateResponse, {
         "Update User - response code was 200": (updateResponse) =>
             updateResponse.status == 200,
+        "Update User - response time is less than 2000ms": (updateResponse) =>
+            updateResponse.timings.duration < 2000,
+        "Update response name is correct": (updateResponse) => {
+            const responseBody = JSON.parse(updateResponse.body);
+            return responseBody.name === "morpheus";
+        },
+        "Update response job is correct": (updateResponse) => {
+            const responseBody = JSON.parse(updateResponse.body);
+            return responseBody.job === "zion resident";
+        },
     });
 }
